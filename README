@@ -36,3 +36,9 @@ the error message field has been dropped from libfap.
 
 
 73 de OH2GVE
+
+## Source SBOM
+
+See [repository source SBOM report](SBOM.md). Release reports are generated automatically.
+
+The [source SBOM policy](SBOM-POLICY.md) describes automatic release artifacts.

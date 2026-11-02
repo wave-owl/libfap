@@ -1,0 +1,21 @@
+{
+  "gitlinks": {},
+  "vendored": [],
+  "models": [],
+  "external_libraries": [
+    {
+      "name": "Conditional source requirements declared by configure.ac",
+      "version": "unresolved; see immutable declaration evidence",
+      "evidence": [
+        "configure.ac"
+      ]
+    },
+    {
+      "name": "Autotools C library; configure.ac/src/Makefile.am define compilation",
+      "version": "unresolved; conditional source declaration",
+      "evidence": [
+        "configure.ac"
+      ]
+    }
+  ]
+}

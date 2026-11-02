@@ -1,0 +1,167 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "external-library:0",
+      "name": "Conditional source requirements declared by configure.ac",
+      "properties": [
+        {
+          "name": "sbom:role",
+          "value": "conditional-build-runtime-requirement"
+        },
+        {
+          "name": "sbom:resolution",
+          "value": "conditional; unresolved version"
+        },
+        {
+          "name": "sbom:declared-version",
+          "value": "unresolved; see immutable declaration evidence"
+        },
+        {
+          "name": "sbom:evidence",
+          "value": "[{\"path\": \"configure.ac\", \"sha256\": \"3b042e237dcd5a7c6571f0a122bebd7bb598535b44e09cdffa1d784675c75a71\"}]"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "external-library:1",
+      "name": "Autotools C library; configure.ac/src/Makefile.am define compilation",
+      "properties": [
+        {
+          "name": "sbom:role",
+          "value": "conditional-build-runtime-requirement"
+        },
+        {
+          "name": "sbom:resolution",
+          "value": "conditional; unresolved version"
+        },
+        {
+          "name": "sbom:declared-version",
+          "value": "unresolved; conditional source declaration"
+        },
+        {
+          "name": "sbom:evidence",
+          "value": "[{\"path\": \"configure.ac\", \"sha256\": \"3b042e237dcd5a7c6571f0a122bebd7bb598535b44e09cdffa1d784675c75a71\"}]"
+        }
+      ],
+      "type": "library"
+    }
+  ],
+  "compositions": [
+    {
+      "aggregate": "unknown",
+      "assemblies": [
+        "git:https://github.com/wave-owl/libfap@074f4ab7732a9e37c1dc07d10bf3048e294bce0b"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [],
+      "ref": "external-library:0"
+    },
+    {
+      "dependsOn": [],
+      "ref": "external-library:1"
+    },
+    {
+      "dependsOn": [
+        "external-library:0",
+        "external-library:1"
+      ],
+      "ref": "git:https://github.com/wave-owl/libfap@074f4ab7732a9e37c1dc07d10bf3048e294bce0b"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "git:https://github.com/wave-owl/libfap@074f4ab7732a9e37c1dc07d10bf3048e294bce0b",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/wave-owl/libfap/tree/074f4ab7732a9e37c1dc07d10bf3048e294bce0b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "wave-owl/libfap",
+      "properties": [
+        {
+          "name": "sbom:role",
+          "value": "source-root"
+        },
+        {
+          "name": "sbom:git-commit",
+          "value": "074f4ab7732a9e37c1dc07d10bf3048e294bce0b"
+        },
+        {
+          "name": "sbom:git-tree",
+          "value": "6eb513aed66b75d816bbe5e67aa7e26438d0ca01"
+        },
+        {
+          "name": "sbom:source-repository",
+          "value": "https://github.com/wave-owl/libfap"
+        },
+        {
+          "name": "sbom:release-tags",
+          "value": "[]"
+        },
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"COPYING\", \"sha256\": \"efc0525431cb97e2ba274772c8f204f85b88b18f1dcce26c54553506a0b4728c\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        },
+        {
+          "name": "sbom:snapshot",
+          "value": "true"
+        },
+        {
+          "name": "sbom:snapshot-source-commit",
+          "value": "074f4ab7732a9e37c1dc07d10bf3048e294bce0b"
+        },
+        {
+          "name": "sbom:snapshot-scope",
+          "value": "Initial immutable source snapshot, before the tooling commit; not a release report."
+        }
+      ],
+      "type": "application",
+      "version": "074f4ab7732a9e37c1dc07d10bf3048e294bce0b"
+    },
+    "properties": [
+      {
+        "name": "sbom:scope",
+        "value": "Source repository inventory only; completeness is UNKNOWN. Syft inventories tracked source/package manifests. Gitlinks and declared vendored/model evidence are inspected at immutable pins. CMake declarations are conditional requirements, not resolved installations. This is NOT proof of operating-system packages, static-link closure, build-time resolution, or the contents of release binaries."
+      },
+      {
+        "name": "sbom:generation-status",
+        "value": "success"
+      },
+      {
+        "name": "sbom:generation-errors",
+        "value": "[]"
+      }
+    ],
+    "timestamp": "2026-11-02T16:50:36.267526+00:00",
+    "tools": {
+      "components": [
+        {
+          "author": "anchore",
+          "name": "syft",
+          "type": "application",
+          "version": "1.55.0"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:c9e7273e-a6b3-4553-837d-98d2df61c833",
+  "specVersion": "1.6",
+  "version": 1
+}
